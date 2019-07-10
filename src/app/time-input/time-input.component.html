@@ -1,0 +1,7 @@
+<div [formGroup]="timeForm" class="dps-time-input-container">
+    <input class="dps-time-input-element" matInput type="text" autocomplete="off" name="{{controllerName+'hour'}}" formControlName="hour"
+      size="1" maxlength="2"  #hourInput>
+    <span class="dps-time-input-spacer">:</span>
+    <input class="dps-time-input-element" matInput type="text" autocomplete="off" name="{{controllerName+'minute'}}" formControlName="minute"
+      size="1" maxlength="2"  #minuteInput>
+</div>

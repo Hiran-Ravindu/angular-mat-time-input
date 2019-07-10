@@ -1,7 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+
+import {
+  switchMap,
+  map, takeUntil, startWith, filter, tap, pairwise
+} from 'rxjs/operators';
+
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { FocusMonitor } from '@angular/cdk/a11y';
+import { MatFormFieldControl } from '@angular/material';
+import { Component, OnInit, AfterViewInit, OnDestroy, Input, ElementRef, ViewChild, SimpleChanges, OnChanges } from '@angular/core';
+import { Subject, fromEvent } from 'rxjs';
 
 @Component({
-  selector: 'app-time-input',
+  selector: 'dps-time-input',
   templateUrl: './time-input.component.html',
   styleUrls: ['./time-input.component.scss'],
   providers: [{ provide: MatFormFieldControl, useExisting: TimeInputComponent }],

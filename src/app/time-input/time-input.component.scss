@@ -1,0 +1,21 @@
+.dps-time-input-container {
+    display: flex;
+  }
+  
+  .dps-time-input-element {
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+    font: inherit;
+    text-align: center;
+  }
+  
+  .dps-time-input-spacer {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+  
+  :host.example-floating .dps-time-input-spacer {
+    opacity: 1;
+  }
